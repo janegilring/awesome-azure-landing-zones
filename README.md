@@ -67,6 +67,8 @@ gh extension install github/gh-skill
 
 ```powershell
 # Search GitHub for Agent Skills (SKILL.md files)
+# Note: GitHub code search only returns results once the repo has been indexed,
+# which can take a while for brand-new public repositories.
 gh search code '"SKILL.md" path:skills' --owner janegilring --limit 10
 
 # Browse the community catalog of instructions, agents, and skills
@@ -76,7 +78,7 @@ Start-Process "https://awesome-copilot.github.com/"
 ### Install a single skill or agent with the GitHub CLI
 
 ```powershell
-# Install one skill into the current project's .github/skills folder
+# Install one skill into the current project's .agents/skills folder
 gh skill install janegilring/awesome-azure-landing-zones caf-network-topology-connectivity
 
 # Reload VS Code so the new skill is picked up:
@@ -91,14 +93,14 @@ Use this when you want everything, or when `gh skill` is not available:
 # Clone the repository
 git clone https://github.com/janegilring/awesome-azure-landing-zones.git "$env:TEMP\awesome-azure-landing-zones"
 
-# Copy the skills and agents into your project
-New-Item -ItemType Directory -Force -Path .github\skills, .github\agents | Out-Null
-Copy-Item -Recurse "$env:TEMP\awesome-azure-landing-zones\skills\*"  .github\skills\
-Copy-Item -Recurse "$env:TEMP\awesome-azure-landing-zones\agents\*"  .github\agents\
+# Copy the skills and agents into your project (same layout `gh skill` uses)
+New-Item -ItemType Directory -Force -Path .agents\skills, .agents\agents | Out-Null
+Copy-Item -Recurse "$env:TEMP\awesome-azure-landing-zones\skills\*"  .agents\skills\
+Copy-Item -Recurse "$env:TEMP\awesome-azure-landing-zones\agents\*"  .agents\agents\
 
 # Confirm what landed
-Get-ChildItem .github\skills -Directory
-Get-ChildItem .github\agents -File
+Get-ChildItem .agents\skills -Directory
+Get-ChildItem .agents\agents -File
 ```
 
 ### Use a skill
