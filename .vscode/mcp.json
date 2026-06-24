@@ -1,0 +1,62 @@
+{
+	// MCP servers used by the CAF/ALZ skills and agents in this repository.
+	// VS Code reads this file automatically (Agent mode → tools picker → Start).
+	// See AGENTS.md → "MCP servers" for which agents use which server, and the
+	// tool-mapping convention in CONTRIBUTING.md.
+	//
+	// Prerequisites:
+	//   - Node.js 18+ (npx)      → microsoft-learn (none), github, azure, drawio
+	//   - Docker running         → terraform
+	//   - .NET 10 SDK (dnx)      → bicep
+	//   - az login / azd auth    → azure, azure-resource-manager (live Azure queries)
+	"servers": {
+		// Grounding: official Microsoft + Azure documentation. Use for EVERY agent.
+		"microsoft-learn": {
+			"type": "http",
+			"url": "https://learn.microsoft.com/api/mcp"
+		},
+		// Fetch the latest from the official ALZ repositories (Azure/ALZ-Bicep,
+		// Azure/alz-terraform-accelerator, Azure/Azure-Landing-Zones-Library, etc.).
+		"github": {
+			"type": "http",
+			"url": "https://api.githubcopilot.com/mcp/"
+		},
+		// Azure MCP Server — 200+ tools across 40+ Azure services. Live resource-level
+		// queries inside a subscription (resources, pricing, logs, diagnostics).
+		"azure": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "@azure/mcp@latest", "server", "start"]
+		},
+		// Azure Resource Manager MCP Server — governance-level queries: management
+		// group hierarchy, tenant-wide Azure Resource Graph, cross-subscription
+		// enumeration (read tools: generate_query / validate_query / execute_query).
+		"azure-resource-manager": {
+			"type": "http",
+			"url": "https://mcp.management.azure.com"
+		},
+		// Terraform MCP Server (HashiCorp) — Terraform Registry: providers, modules
+		// (incl. Azure Verified Modules for Terraform), and policies.
+		"terraform": {
+			"type": "stdio",
+			"command": "docker",
+			"args": ["run", "-i", "--rm", "hashicorp/terraform-mcp-server"]
+		},
+		// Bicep MCP Server (Azure) — Bicep best practices, diagnostics, formatting,
+		// resource-type schemas, and Azure Verified Modules metadata via the
+		// `list_avm_metadata` tool. This is the AVM source for the Bicep IaC path.
+		"bicep": {
+			"type": "stdio",
+			"command": "dnx",
+			"args": ["-y", "Azure.Bicep.McpServer"]
+		},
+		// draw.io MCP Server — search Azure shape styles and render architecture
+		// diagrams (e.g. topology / live-state diagrams produced by the agents).
+		"drawio": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "@drawio/mcp"]
+		}
+	},
+	"inputs": []
+}
