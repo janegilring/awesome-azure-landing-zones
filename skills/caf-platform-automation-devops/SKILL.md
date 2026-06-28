@@ -77,4 +77,4 @@ skill.
 - Skill: `caf-governance` — policy as code deployed through these pipelines.
 - Skill: `caf-management` — operational baselines kept current via automation.
 - Skill: `caf-identity-access-management` — identities and least-privilege for automation.
-- Agent: `alz-accelerator-expert` (planned) — bootstrap and module deployment workflows.
+- Agent: `alz-accelerator-expert` — bootstrap and module deployment workflows.

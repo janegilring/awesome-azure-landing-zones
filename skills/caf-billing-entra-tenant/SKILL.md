@@ -80,4 +80,4 @@ isolation requirements.
 - Skill: `caf-resource-organization` — management groups and subscriptions under the tenant.
 - Skill: `caf-governance` — guardrails applied once the hierarchy exists.
 - Skill: `alz-accelerator` — bootstrapping the platform within the tenant.
-- Agent: `azure-architect` (planned) — frames these foundational decisions end to end.
+- Agent: `azure-architect` — frames these foundational decisions end to end.

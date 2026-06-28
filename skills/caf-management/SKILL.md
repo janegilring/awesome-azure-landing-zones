@@ -75,4 +75,4 @@ defaults rather than bespoke per-team operations.
 - Skill: `caf-governance` — policies that deploy AMBA and enforce monitoring at scale.
 - Skill: `caf-resource-organization` — where the Management subscription sits in the hierarchy.
 - Skill: `caf-platform-automation-devops` — pipelines that keep the management baseline current.
-- Agent: `azure-architect` (planned) — incorporates the operations baseline into the overall design.
+- Agent: `azure-architect` — incorporates the operations baseline into the overall design.

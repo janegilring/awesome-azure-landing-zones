@@ -78,4 +78,4 @@ hierarchy for **policy inheritance and operational clarity**, not to mirror the 
 - Skill: `caf-network-topology-connectivity` — where the Connectivity subscription fits.
 - Skill: `caf-identity-access-management` — where the Identity subscription fits.
 - Skill: `caf-billing-entra-tenant` — the tenant/billing scope above the hierarchy.
-- Agent: `landing-zone-vending` (planned) — creating subscriptions into this structure at scale.
+- Agent: `landing-zone-vending` — creating subscriptions into this structure at scale.

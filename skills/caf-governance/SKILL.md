@@ -78,4 +78,4 @@ controls.
 - Skill: `caf-security` — the security baseline (MCSB) enforced via policy.
 - Skill: `caf-management` — AMBA and monitoring deployed at scale through DINE policies.
 - Skill: `caf-platform-automation-devops` — pipelines that deliver policy as code.
-- Agent: `azure-governance` (planned) — Azure Policy, AMBA, EPAC, and compliance operations.
+- Agent: `azure-governance` — Azure Policy, AMBA, EPAC, and compliance operations.
