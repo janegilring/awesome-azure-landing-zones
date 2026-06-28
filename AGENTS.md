@@ -34,18 +34,18 @@ Design-area skills map 1:1 to the eight CAF/ALZ design areas, plus a technical A
 
 | Design area / topic | Skill |
 | :--- | :--- |
-| Azure billing and Microsoft Entra tenant | `skills/caf-billing-entra-tenant/` |
-| Identity and access management | `skills/caf-identity-access-management/` |
-| Resource organization | `skills/caf-resource-organization/` |
+| Azure billing and Microsoft Entra tenant | [`skills/caf-billing-entra-tenant/`](skills/caf-billing-entra-tenant/SKILL.md) |
+| Identity and access management | [`skills/caf-identity-access-management/`](skills/caf-identity-access-management/SKILL.md) |
+| Resource organization | [`skills/caf-resource-organization/`](skills/caf-resource-organization/SKILL.md) |
 | Network topology and connectivity | [`skills/caf-network-topology-connectivity/`](skills/caf-network-topology-connectivity/SKILL.md) |
-| Security | `skills/caf-security/` |
-| Management | `skills/caf-management/` |
-| Governance | `skills/caf-governance/` |
-| Platform automation and DevOps | `skills/caf-platform-automation-devops/` |
+| Security | [`skills/caf-security/`](skills/caf-security/SKILL.md) |
+| Management | [`skills/caf-management/`](skills/caf-management/SKILL.md) |
+| Governance | [`skills/caf-governance/`](skills/caf-governance/SKILL.md) |
+| Platform automation and DevOps | [`skills/caf-platform-automation-devops/`](skills/caf-platform-automation-devops/SKILL.md) |
 | ALZ Accelerator (Bicep + Terraform) | `skills/alz-accelerator/` |
 
-> Only the items rendered as links exist today. The remaining rows are planned (see
-> [`CONTRIBUTING.md`](CONTRIBUTING.md) for the authoring template).
+> All eight design-area skills now exist. The ALZ Accelerator skill and the remaining agents are
+> planned (see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the authoring template).
 
 ## Agents in this repository
 
