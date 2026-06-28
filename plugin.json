@@ -1,7 +1,7 @@
 {
   "name": "awesome-azure-landing-zones",
   "description": "AI skills and agents for the Microsoft Cloud Adoption Framework (CAF) and Azure Landing Zones (ALZ): the eight design areas, the ALZ Accelerator, subscription/landing-zone vending, governance and policy, and networking and connectivity.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Jan Egil Ring",
     "url": "https://github.com/janegilring"
