@@ -22,7 +22,8 @@ Status legend: ✅ available · 🟡 planned
 
 | Status | Skill | Description |
 | :---: | :--- | :--- |
-| 🟡 | `alz-accelerator` | Deploy ALZ with the Accelerator. Bicep and Terraform variants in `references/`. |
+| ✅ | [`alz-accelerator`](../skills/alz-accelerator/SKILL.md) | Deploy ALZ with the Accelerator. Bicep and Terraform variants in `references/`. |
+| ✅ | [`landing-zone-vending`](../skills/landing-zone-vending/SKILL.md) | Subscription vending: request → deploy → govern → hand off, with the AVM sub-vending modules. |
 
 ## Shared references
 

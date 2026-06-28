@@ -103,6 +103,7 @@ instead of duplicating URLs. Prefer `aka.ms` aliases and `learn.microsoft.com` h
 | https://aka.ms/lz-vending/bicep | Bicep landing zone vending module |
 | https://aka.ms/lz-vending/tf | Terraform landing zone vending module |
 | https://aka.ms/sub-vending | Subscription vending design area |
+| https://learn.microsoft.com/azure/architecture/landing-zones/subscription-vending | Subscription vending implementation guidance (Architecture Center) |
 
 ## Migration
 

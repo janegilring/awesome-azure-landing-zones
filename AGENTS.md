@@ -42,21 +42,22 @@ Design-area skills map 1:1 to the eight CAF/ALZ design areas, plus a technical A
 | Management | [`skills/caf-management/`](skills/caf-management/SKILL.md) |
 | Governance | [`skills/caf-governance/`](skills/caf-governance/SKILL.md) |
 | Platform automation and DevOps | [`skills/caf-platform-automation-devops/`](skills/caf-platform-automation-devops/SKILL.md) |
-| ALZ Accelerator (Bicep + Terraform) | `skills/alz-accelerator/` |
+| ALZ Accelerator (Bicep + Terraform) | [`skills/alz-accelerator/`](skills/alz-accelerator/SKILL.md) |
+| Landing zone (subscription) vending | [`skills/landing-zone-vending/`](skills/landing-zone-vending/SKILL.md) |
 
-> All eight design-area skills now exist. The ALZ Accelerator skill and the remaining agents are
-> planned (see [`CONTRIBUTING.md`](CONTRIBUTING.md) for the authoring template).
+> All eight design-area skills, the ALZ Accelerator skill, and all six agents now exist.
+> See [`CONTRIBUTING.md`](CONTRIBUTING.md) for the authoring template.
 
 ## Agents in this repository
 
 | Agent | Scope |
 | :--- | :--- |
 | [`networking-connectivity`](agents/networking-connectivity.agent.md) | Hub-spoke, Virtual WAN, private DNS, private endpoints, hybrid connectivity. |
-| `azure-architect` | CAF/WAF design-area decisions across the whole landing zone (planned). |
-| `alz-accelerator-expert` | Bootstrap + starter modules for the ALZ Accelerator (planned). |
-| `azure-migration` | Azure Migrate and brownfield → ALZ adoption (planned). |
-| `governance-policy` | Azure Policy, AMBA, EPAC, compliance (planned). |
-| `landing-zone-vending` | Subscription / landing zone vending (planned). |
+| [`azure-architect`](agents/azure-architect.agent.md) | CAF/WAF design-area decisions across the whole landing zone. |
+| [`alz-accelerator-expert`](agents/alz-accelerator-expert.agent.md) | Bootstrap + starter modules for the ALZ Accelerator. |
+| [`azure-migration`](agents/azure-migration.agent.md) | Azure Migrate and brownfield → ALZ adoption. |
+| [`governance-policy`](agents/governance-policy.agent.md) | Azure Policy, AMBA, EPAC, compliance. |
+| [`landing-zone-vending`](agents/landing-zone-vending.agent.md) | Subscription / landing zone vending. |
 
 ## MCP servers
 
