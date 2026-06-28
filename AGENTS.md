@@ -70,7 +70,7 @@ automatically (Agent mode → tools picker).
 | Server | Transport | Purpose | Used by |
 | :--- | :--- | :--- | :--- |
 | `microsoft-learn` | http | Ground answers in official Microsoft/Azure docs. | **All agents.** |
-| `github` | http | Fetch the latest from official ALZ repos (`Azure/ALZ-Bicep`, `Azure/alz-terraform-accelerator`, `Azure/Azure-Landing-Zones-Library`). | `alz-accelerator-expert`, `landing-zone-vending`, `azure-migration`. |
+| `github` | http | Read: fetch the latest from official ALZ repos (`Azure/ALZ-Bicep`, `Azure/alz-terraform-accelerator`, `Azure/Azure-Landing-Zones-Library`). Write: create branches, commit parameter files, open PRs, and manage issues — the actions behind the Gitflow vending trigger (write tools need a GitHub login/token with repo scope). | `alz-accelerator-expert`, `landing-zone-vending`, `azure-migration`. |
 | `azure` | stdio (`npx @azure/mcp`) | Azure MCP Server — 200+ tools across 40+ services for live resource-level queries (resources, pricing, logs, diagnostics). | Agents that query/operate a live environment. |
 | `azure-resource-manager` | http | Governance-level live queries: management-group hierarchy, tenant-wide Resource Graph, cross-subscription enumeration. | `azure-architect`, `governance-policy`, `azure-migration`. |
 | `terraform` | stdio (Docker) | Terraform Registry — providers, modules (incl. **AVM for Terraform**), policies. | `alz-accelerator-expert`, `landing-zone-vending`. |

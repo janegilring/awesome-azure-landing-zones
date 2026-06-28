@@ -15,8 +15,12 @@
 			"type": "http",
 			"url": "https://learn.microsoft.com/api/mcp"
 		},
-		// Fetch the latest from the official ALZ repositories (Azure/ALZ-Bicep,
-		// Azure/alz-terraform-accelerator, Azure/Azure-Landing-Zones-Library, etc.).
+		// GitHub MCP Server (GitHub Copilot). Read: fetch the latest from the
+		// official ALZ repositories (Azure/ALZ-Bicep, Azure/alz-terraform-accelerator,
+		// Azure/Azure-Landing-Zones-Library, etc.). Write: create branches, commit
+		// parameter files, open pull requests, and manage issues — the actions behind
+		// the Gitflow vending trigger (see landing-zone-vending). Write tools require
+		// a GitHub login/token with repo scope.
 		"github": {
 			"type": "http",
 			"url": "https://api.githubcopilot.com/mcp/"

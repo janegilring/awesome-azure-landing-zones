@@ -109,6 +109,10 @@ two patterns; the intake performs the corresponding action.
 This keeps every landing zone request auditable and reviewable in Git, and keeps the IaC
 platform-owned. The intake needs permission only to open a PR — not to deploy.
 
+> **Tooling:** in VS Code Agent mode or Copilot CLI, the **GitHub MCP** server performs steps 1–2
+> (create branch, commit the parameter file, open the PR). Its write tools require a GitHub
+> login/token with `repo` scope.
+
 ### Pattern B — pipeline dispatch (API)
 
 1. Intake calls the deployment pipeline directly via a dispatch API:

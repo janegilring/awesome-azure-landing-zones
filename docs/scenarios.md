@@ -33,6 +33,11 @@ flowchart LR
   [`alz-accelerator-expert`](../agents/alz-accelerator-expert.agent.md) agents.
 - A commercial agreement (EA/MCA/CSP) that allows programmatic subscription creation.
 - A secretless deployment identity (OIDC / workload identity federation) for the pipeline.
+- **For the trigger (both phases):** the **GitHub MCP** server (already declared in this repo's
+  [`.vscode/mcp.json`](../.vscode/mcp.json)) lets Copilot create the branch, commit the parameter
+  file, and open the pull request that fires the Gitflow vending trigger (Pattern A) — its write
+  tools need a GitHub login/token with `repo` scope. For Azure DevOps repos, use the pipeline
+  dispatch trigger (Pattern B) instead.
 - **For Phase 2 (the intake):** the [Azure Skills Plugin](https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/)
   (`aka.ms/azure-plugin`, `microsoft/azure-skills`). The `azure-prepare`, `azure-deploy`, and
   `microsoft-foundry` skills referenced below ship in **that** plugin, not in this repository —
