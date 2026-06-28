@@ -16,7 +16,8 @@ domain knowledge for designing, deploying, governing, and operating Azure landin
 | `skills/_shared/` | Shared references used by multiple skills (e.g. the curated CAF link catalog). |
 | `.vscode/mcp.json` | MCP server configuration that gives the agents live tools (Azure, Terraform, Bicep, draw.io, docs). |
 | `CONTRIBUTING.md` | Authoring conventions for skills and agents. |
-| `README.md` | Human-facing overview and install instructions (GitHub CLI). |
+| `plugin.json` | Copilot CLI plugin manifest: makes the whole repo installable as one plugin. |
+| `README.md` | Human-facing overview and install instructions (Copilot CLI plugin). |
 | `docs/resources.md` | Curated `aka.ms` link catalog and other useful resources. |
 
 ## What is a skill vs. an agent?

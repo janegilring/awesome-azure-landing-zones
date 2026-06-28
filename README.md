@@ -48,64 +48,55 @@ Plus a technical **ALZ Accelerator** skill (Bicep + Terraform).
 
 ## Installing the skills and agents
 
-The skills and agents in this repository follow the GitHub **Agent Skills** convention, so you can
-install them with the [GitHub CLI](https://cli.github.com/), clone them manually, or copy
-individual folders into a target project.
+This repository is a **GitHub Copilot CLI plugin**: the `agents/` and `skills/` folders plus the
+[`plugin.json`](plugin.json) manifest at the root make the whole library installable as a single
+unit. Install everything in one command, enable it declaratively for a team, or copy individual
+folders manually.
 
-### Prerequisites
+### Install everything with the Copilot CLI
+
+Requires the [GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-cli).
 
 ```powershell
-# GitHub CLI (https://cli.github.com)
-winget install --id GitHub.cli
-gh auth login
+# Install ALL skills and agents from this repo as one plugin
+copilot plugin install janegilring/awesome-azure-landing-zones
 
-# The skills extension for `gh skill ...` (https://cli.github.com/manual/gh_skill_install)
-gh extension install github/gh-skill
+# Confirm it installed
+copilot plugin list
 ```
 
-### Discover skills
+Then start `copilot` and reference any skill or agent by name in your prompt.
 
-```powershell
-# Search GitHub for Agent Skills (SKILL.md files)
-# Note: GitHub code search only returns results once the repo has been indexed,
-# which can take a while for brand-new public repositories.
-gh search code '"SKILL.md" path:skills' --owner janegilring --limit 10
+### Enable it declaratively (teams)
 
-# Browse the community catalog of instructions, agents, and skills
-Start-Process "https://awesome-copilot.github.com/"
-```
+Add the plugin to the `enabledPlugins` field of a user-level `~/.copilot/settings.json` or a
+repository-level `.github/copilot/settings.json` so everyone on the project gets it automatically:
 
-### Install a single skill or agent with the GitHub CLI
-
-```powershell
-# Install one skill into the current project's .agents/skills folder
-gh skill install janegilring/awesome-azure-landing-zones caf-network-topology-connectivity
-
-# Reload VS Code so the new skill is picked up:
-#   Ctrl+Shift+P → "Developer: Reload Window"
+```json
+{
+  "enabledPlugins": ["janegilring/awesome-azure-landing-zones"]
+}
 ```
 
 ### Install manually (clone and copy)
 
-Use this when you want everything, or when `gh skill` is not available:
+Use this when you are not using the Copilot CLI plugin system, or want only specific folders.
+Skills and agents are picked up from your personal `~/.copilot` folders:
 
 ```powershell
-# Clone the repository
 git clone https://github.com/janegilring/awesome-azure-landing-zones.git "$env:TEMP\awesome-azure-landing-zones"
 
-# Copy the skills and agents into your project (same layout `gh skill` uses)
-New-Item -ItemType Directory -Force -Path .agents\skills, .agents\agents | Out-Null
-Copy-Item -Recurse "$env:TEMP\awesome-azure-landing-zones\skills\*"  .agents\skills\
-Copy-Item -Recurse "$env:TEMP\awesome-azure-landing-zones\agents\*"  .agents\agents\
-
-# Confirm what landed
-Get-ChildItem .agents\skills -Directory
-Get-ChildItem .agents\agents -File
+New-Item -ItemType Directory -Force -Path "$HOME\.copilot\skills", "$HOME\.copilot\agents" | Out-Null
+Copy-Item -Recurse -Force "$env:TEMP\awesome-azure-landing-zones\skills\*" "$HOME\.copilot\skills\"
+Copy-Item -Recurse -Force "$env:TEMP\awesome-azure-landing-zones\agents\*" "$HOME\.copilot\agents\"
 ```
 
-### Use a skill
+> Skills are deduplicated by their `name` field and agents by file name, and project-level copies
+> take precedence over a plugin if both are present.
 
-Once installed and the VS Code window is reloaded, reference the skill by name in your prompt, e.g.:
+### Use a skill or agent
+
+Reference it by name in your prompt, e.g.:
 
 > Design connectivity for a multi-region landing zone. Use the `caf-network-topology-connectivity` skill.
 
