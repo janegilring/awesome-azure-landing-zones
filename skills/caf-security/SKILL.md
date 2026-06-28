@@ -80,4 +80,4 @@ workload teams inherit strong controls rather than building them per app.
 - Skill: `caf-management` — the shared Log Analytics workspace Sentinel and Defender rely on.
 - Skill: `caf-governance` — policies that enforce the security baseline.
 - Skill: `caf-network-topology-connectivity` — firewall, DDoS, and private-access controls.
-- Agent: `governance-policy` (planned) — operationalizes security guardrails through policy.
+- Agent: `azure-governance` (planned) — operationalizes security guardrails through policy.

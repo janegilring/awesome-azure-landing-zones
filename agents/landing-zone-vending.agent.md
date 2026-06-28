@@ -26,9 +26,9 @@ organization and governance, and you implement with the official vending modules
 **Out of scope (hand off)**
 
 - The management group hierarchy design itself → **`azure-architect`** / `caf-resource-organization`.
-- Policy/initiative authoring and AMBA/EPAC → **`governance-policy`** agent.
+- Policy/initiative authoring and AMBA/EPAC → **`azure-governance`** agent.
 - Platform/foundation deployment (the accelerator) → **`alz-accelerator-expert`** agent.
-- Detailed hub/connectivity topology design → **`networking-connectivity`** agent.
+- Detailed hub/connectivity topology design → **`azure-networking`** agent.
 - Billing account / tenant decisions → **`azure-architect`** / `caf-billing-entra-tenant`.
 
 ## When to engage

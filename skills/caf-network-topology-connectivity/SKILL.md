@@ -108,7 +108,7 @@ Use **customer-managed hub-and-spoke** when you need:
 - Skill: `caf-security` — firewall, DDoS, and Zero Trust network controls.
 - Skill: `caf-governance` — policies that enforce DNS, DDoS, and peering guardrails.
 - Skill: `alz-accelerator` — deploying the connectivity resources with Bicep or Terraform.
-- Agent: [`networking-connectivity`](../../agents/networking-connectivity.agent.md) — the persona that drives connectivity design using this skill.
+- Agent: [`azure-networking`](../../agents/azure-networking.agent.md) — the persona that drives connectivity design using this skill.
 
 ## References
 

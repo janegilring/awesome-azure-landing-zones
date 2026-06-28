@@ -27,8 +27,8 @@ tool-specific where it matters and defer architecture decisions to the design-ar
 **Out of scope (hand off)**
 
 - Architecture and design-area decisions → **`azure-architect`** + the `caf-*` skills.
-- Detailed network topology design → **`networking-connectivity`** agent.
-- Policy/AMBA/EPAC authoring → **`governance-policy`** agent.
+- Detailed network topology design → **`azure-networking`** agent.
+- Policy/AMBA/EPAC authoring → **`azure-governance`** agent.
 - Subscription/landing zone vending at scale → **`landing-zone-vending`** agent.
 
 ## When to engage

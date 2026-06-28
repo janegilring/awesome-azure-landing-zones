@@ -107,7 +107,7 @@ schema.
 | Phase | Agent / skill | Role |
 | :--- | :--- | :--- |
 | 1 | [`landing-zone-vending`](../agents/landing-zone-vending.agent.md) | Vending contract + `*-lz-vending` implementation. |
-| 1 | [`governance-policy`](../agents/governance-policy.agent.md) | Policy scope new landing zones inherit (if needed). |
+| 1 | [`azure-governance`](../agents/azure-governance.agent.md) | Policy scope new landing zones inherit (if needed). |
 | 2A | `azure-prepare` + `azure-deploy` (Azure Skills Plugin) | Web intake on Container Apps / App Service. |
 | 2B | `microsoft-foundry` (Azure Skills Plugin) | Conversational AI intake that triggers the pipeline. |
 
@@ -117,8 +117,8 @@ Additional end-to-end scenarios will be added here. Candidates:
 
 - Greenfield platform build with the ALZ Accelerator (`alz-accelerator-expert`).
 - Brownfield adoption of an existing environment into an ALZ (`azure-migration`).
-- Policy-as-code rollout with EPAC and AMBA (`governance-policy`).
-- Hub-spoke vs Virtual WAN connectivity design (`networking-connectivity`).
+- Policy-as-code rollout with EPAC and AMBA (`azure-governance`).
+- Hub-spoke vs Virtual WAN connectivity design (`azure-networking`).
 
 ## Related
 

@@ -1,5 +1,5 @@
 ---
-name: networking-connectivity
+name: azure-networking
 description: "Azure landing zone networking and connectivity expert. Designs and reviews hub-spoke vs Virtual WAN topologies, IP addressing, DNS and private endpoints, traffic inspection, and hybrid connectivity (ExpressRoute/VPN)."
 ---
 
@@ -27,7 +27,7 @@ requirements-driven recommendations and explain the trade-offs.
 
 - Deploying the platform end-to-end → **`alz-accelerator-expert`** agent / `alz-accelerator` skill.
 - Management group and subscription structure → **`azure-architect`** / `caf-resource-organization`.
-- Policy authoring/enforcement details → **`governance-policy`** / `caf-governance`.
+- Policy authoring/enforcement details → **`azure-governance`** / `caf-governance`.
 - RBAC for network resources → the `azure-rbac` skill.
 - Application-internal networking unrelated to the platform foundation.
 

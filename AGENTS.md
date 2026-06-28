@@ -54,11 +54,11 @@ Design-area skills map 1:1 to the eight CAF/ALZ design areas, plus a technical A
 
 | Agent | Scope |
 | :--- | :--- |
-| [`networking-connectivity`](agents/networking-connectivity.agent.md) | Hub-spoke, Virtual WAN, private DNS, private endpoints, hybrid connectivity. |
+| [`azure-networking`](agents/azure-networking.agent.md) | Hub-spoke, Virtual WAN, private DNS, private endpoints, hybrid connectivity. |
 | [`azure-architect`](agents/azure-architect.agent.md) | CAF/WAF design-area decisions across the whole landing zone. |
 | [`alz-accelerator-expert`](agents/alz-accelerator-expert.agent.md) | Bootstrap + starter modules for the ALZ Accelerator. |
 | [`azure-migration`](agents/azure-migration.agent.md) | Azure Migrate and brownfield → ALZ adoption. |
-| [`governance-policy`](agents/governance-policy.agent.md) | Azure Policy, AMBA, EPAC, compliance. |
+| [`azure-governance`](agents/azure-governance.agent.md) | Azure Policy, AMBA, EPAC, compliance. |
 | [`landing-zone-vending`](agents/landing-zone-vending.agent.md) | Subscription / landing zone vending. |
 
 ## MCP servers
@@ -72,10 +72,10 @@ automatically (Agent mode → tools picker).
 | `microsoft-learn` | http | Ground answers in official Microsoft/Azure docs. | **All agents.** |
 | `github` | http | Read: fetch the latest from official ALZ repos (`Azure/ALZ-Bicep`, `Azure/alz-terraform-accelerator`, `Azure/Azure-Landing-Zones-Library`). Write: create branches, commit parameter files, open PRs, and manage issues — the actions behind the Gitflow vending trigger (write tools need a GitHub login/token with repo scope). | `alz-accelerator-expert`, `landing-zone-vending`, `azure-migration`. |
 | `azure` | stdio (`npx @azure/mcp`) | Azure MCP Server — 200+ tools across 40+ services for live resource-level queries (resources, pricing, logs, diagnostics). | Agents that query/operate a live environment. |
-| `azure-resource-manager` | http | Governance-level live queries: management-group hierarchy, tenant-wide Resource Graph, cross-subscription enumeration. | `azure-architect`, `governance-policy`, `azure-migration`. |
+| `azure-resource-manager` | http | Governance-level live queries: management-group hierarchy, tenant-wide Resource Graph, cross-subscription enumeration. | `azure-architect`, `azure-governance`, `azure-migration`. |
 | `terraform` | stdio (Docker) | Terraform Registry — providers, modules (incl. **AVM for Terraform**), policies. | `alz-accelerator-expert`, `landing-zone-vending`. |
 | `bicep` | stdio (`dnx`) | Bicep best practices, diagnostics, formatting, resource schemas, and **AVM metadata** (`list_avm_metadata`). | `alz-accelerator-expert`, `landing-zone-vending`. |
-| `drawio` | stdio (`npx @drawio/mcp`) | Search Azure shape styles and render architecture / topology diagrams. | `networking-connectivity`, `azure-architect`. |
+| `drawio` | stdio (`npx @drawio/mcp`) | Search Azure shape styles and render architecture / topology diagrams. | `azure-networking`, `azure-architect`. |
 
 ### Azure Verified Modules (AVM)
 

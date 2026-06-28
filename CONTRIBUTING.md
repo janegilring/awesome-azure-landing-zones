@@ -75,7 +75,7 @@ frontmatter for tooling that supports it.
 
 ```yaml
 ---
-name: networking-connectivity
+name: azure-networking
 description: "<one-line persona summary>."
 ---
 ```

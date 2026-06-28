@@ -26,8 +26,8 @@ guardrails so adoption doesn't break running workloads.
 **Out of scope (hand off)**
 
 - Greenfield architecture decisions → **`azure-architect`** + the `caf-*` skills.
-- Deep network/connectivity design for the target → **`networking-connectivity`** agent.
-- Policy/AMBA/EPAC authoring and rollout → **`governance-policy`** agent.
+- Deep network/connectivity design for the target → **`azure-networking`** agent.
+- Policy/AMBA/EPAC authoring and rollout → **`azure-governance`** agent.
 - Platform deployment with the accelerator → **`alz-accelerator-expert`** agent.
 - New subscription provisioning at scale → **`landing-zone-vending`** agent.
 

@@ -81,4 +81,4 @@ access is granted just-in-time, how RBAC is structured at scale, and where ident
 - Skill: `caf-security` — Zero Trust, Defender for Identity, and secrets management.
 - Skill: `caf-governance` — policies that enforce identity guardrails.
 - Skill: `caf-resource-organization` — where the Identity subscription sits in the hierarchy.
-- Agent: `governance-policy` (planned) — enforces identity and access guardrails via policy.
+- Agent: `azure-governance` (planned) — enforces identity and access guardrails via policy.

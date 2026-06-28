@@ -7,9 +7,9 @@ Status legend: ✅ available · 🟡 planned
 
 | Status | Agent | Scope | Primary skills used |
 | :---: | :--- | :--- | :--- |
-| ✅ | [`networking-connectivity`](../agents/networking-connectivity.agent.md) | Hub-spoke, Virtual WAN, private DNS, private endpoints, hybrid connectivity. | `caf-network-topology-connectivity` |
+| ✅ | [`azure-networking`](../agents/azure-networking.agent.md) | Hub-spoke, Virtual WAN, private DNS, private endpoints, hybrid connectivity. | `caf-network-topology-connectivity` |
 | ✅ | [`azure-architect`](../agents/azure-architect.agent.md) | End-to-end CAF/WAF design-area decisions for a landing zone. | All `caf-*` design-area skills |
 | ✅ | [`alz-accelerator-expert`](../agents/alz-accelerator-expert.agent.md) | Bootstrap and starter modules for the ALZ Accelerator. | `alz-accelerator`, `caf-platform-automation-devops` |
 | ✅ | [`azure-migration`](../agents/azure-migration.agent.md) | Azure Migrate and brownfield → ALZ adoption. | `caf-resource-organization`, `caf-network-topology-connectivity`, `caf-governance` |
-| ✅ | [`governance-policy`](../agents/governance-policy.agent.md) | Azure Policy, AMBA, EPAC, and compliance. | `caf-governance`, `caf-security`, `caf-management` |
+| ✅ | [`azure-governance`](../agents/azure-governance.agent.md) | Azure Policy, AMBA, EPAC, and compliance. | `caf-governance`, `caf-security`, `caf-management` |
 | ✅ | [`landing-zone-vending`](../agents/landing-zone-vending.agent.md) | Subscription / landing zone vending. | `caf-resource-organization`, `caf-governance` |

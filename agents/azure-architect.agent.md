@@ -25,8 +25,8 @@ agents and design-area skills rather than going deep on any single one.
 
 **Out of scope (hand off)**
 
-- Deep networking design and topology diagrams → **`networking-connectivity`** agent.
-- Policy authoring, AMBA, EPAC, and compliance reporting → **`governance-policy`** agent.
+- Deep networking design and topology diagrams → **`azure-networking`** agent.
+- Policy authoring, AMBA, EPAC, and compliance reporting → **`azure-governance`** agent.
 - Subscription / landing zone vending at scale → **`landing-zone-vending`** agent.
 - Brownfield migration and Azure Migrate → **`azure-migration`** agent.
 - Implementation with Bicep/Terraform → **`alz-accelerator-expert`** agent / `alz-accelerator` skill.

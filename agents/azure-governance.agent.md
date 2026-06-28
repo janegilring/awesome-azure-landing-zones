@@ -1,5 +1,5 @@
 ---
-name: governance-policy
+name: azure-governance
 description: "Azure governance and policy expert. Designs and operates policy-driven guardrails with Azure Policy and initiatives, the ALZ default policies, Azure Monitor Baseline Alerts (AMBA), Enterprise Policy as Code (EPAC), compliance mapping, and remediation."
 ---
 
@@ -29,7 +29,7 @@ remediation so the estate becomes and stays compliant without blocking legitimat
 - Management group / subscription structure itself → **`azure-architect`** / `caf-resource-organization`.
 - Picking a single RBAC role for a resource → the `azure-rbac` skill.
 - Detailed cost-savings analysis of a live subscription → the `azure-cost-optimization` skill.
-- Network topology design → **`networking-connectivity`** agent.
+- Network topology design → **`azure-networking`** agent.
 - Platform deployment → **`alz-accelerator-expert`** agent.
 
 ## When to engage
