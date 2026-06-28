@@ -1,0 +1,3 @@
+43dba2e Pin AVM sub-vending version and fix example params in vending contract
+## main...origin/main
+?? _gitstate.txt
