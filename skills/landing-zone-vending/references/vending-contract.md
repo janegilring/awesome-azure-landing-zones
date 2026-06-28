@@ -130,25 +130,30 @@ commits the rendered parameter file for audit.
 ### Example rendered parameter file (Bicep)
 
 ```bicep
-using 'br/public:avm/ptn/lz/sub-vending:<version>'
+// Pin to a specific published version. 0.8.0 is the latest at the time of writing —
+// check https://mcr.microsoft.com/v2/bicep/avm/ptn/lz/sub-vending/tags/list for newer releases.
+using 'br/public:avm/ptn/lz/sub-vending:0.8.0'
 
 param subscriptionAliasName    = 'contoso-payments-prod'
 param subscriptionDisplayName  = 'Contoso Payments (prod)'
 param subscriptionBillingScope = '/providers/Microsoft.Billing/billingAccounts/.../billingProfiles/.../invoiceSections/...'
 param subscriptionManagementGroupId = 'mg-corp-confidential' // derived from environment + dataClassification
 param virtualNetworkEnabled    = true
+param virtualNetworkName       = 'vnet-contoso-payments-prod'
 param virtualNetworkAddressSpace = ['10.64.12.0/24']
 param virtualNetworkResourceGroupName = 'rg-contoso-payments-network'
 param virtualNetworkLocation   = 'norwayeast'
+param virtualNetworkPeeringEnabled = true
 param hubNetworkResourceId     = '/subscriptions/.../virtualNetworks/vnet-hub-norwayeast'
+param roleAssignmentEnabled    = true
 param roleAssignments          = [
   {
     principalId: '<owner-group-object-id>'
-    roleDefinitionIdOrName: 'Owner'
+    definition: 'Owner'
     relativeScope: ''
   }
 ]
-param tags = {
+param subscriptionTags = {
   Environment: 'prod'
   CostCenter: 'CC10472'
   BusinessUnit: 'Retail Banking'
