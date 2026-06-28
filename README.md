@@ -85,6 +85,24 @@ repository-level `.github/copilot/settings.json` so everyone on the project gets
 }
 ```
 
+### Update to the latest version
+
+All skills and agents ship as a single plugin, so one update refreshes everything — changed
+skills **and** any newly added ones. There is no separate install per skill.
+
+```powershell
+# Refresh the marketplace catalog, then update the plugin
+copilot plugin marketplace update awesome-azure-landing-zones
+copilot plugin update awesome-azure-landing-zones@awesome-azure-landing-zones
+
+# Or update every installed plugin at once
+copilot plugin update --all
+```
+
+> Re-running `copilot plugin install awesome-azure-landing-zones@awesome-azure-landing-zones` also
+> pulls the latest, but `update` is the intended command. If you installed manually, re-run the
+> clone-and-copy steps below to update.
+
 ### Install manually (clone and copy)
 
 Use this when you are not using the Copilot CLI plugin system, or want only specific folders.
