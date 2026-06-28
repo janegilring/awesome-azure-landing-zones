@@ -6,7 +6,7 @@
 	//
 	// Prerequisites:
 	//   - Node.js 18+ (npx)      → microsoft-learn (none), github, azure, drawio
-	//   - Docker running         → terraform
+	//   - Docker running         → terraform (or use the pre-compiled binary — see below)
 	//   - .NET 10 SDK (dnx)      → bicep
 	//   - az login / azd auth    → azure, azure-resource-manager (live Azure queries)
 	"servers": {
@@ -41,6 +41,17 @@
 		},
 		// Terraform MCP Server (HashiCorp) — Terraform Registry: providers, modules
 		// (incl. Azure Verified Modules for Terraform), and policies.
+		//
+		// Default below uses Docker (HashiCorp's recommended option). If Docker is not
+		// available, download the pre-compiled binary and point `command` at it instead:
+		//   https://developer.hashicorp.com/terraform/mcp-server/deploy/local#pre-compiled-binary
+		//   https://releases.hashicorp.com/terraform-mcp-server
+		// Docker-free alternative (replace the block below with this; adjust the path):
+		//   "terraform": {
+		//     "type": "stdio",
+		//     "command": "C:\\tools\\terraform-mcp-server\\terraform-mcp-server.exe",
+		//     "args": ["stdio"]
+		//   },
 		"terraform": {
 			"type": "stdio",
 			"command": "docker",
