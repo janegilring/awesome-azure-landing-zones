@@ -12,7 +12,7 @@ domain knowledge for designing, deploying, governing, and operating Azure landin
 | :--- | :--- |
 | `skills/` | One folder per skill. Each contains a `SKILL.md` and an optional `references/` folder for deep-dive content. |
 | `agents/` | One `*.agent.md` per specialized agent persona. |
-| `docs/` | Index tables: [`README.skills.md`](docs/README.skills.md) and [`README.agents.md`](docs/README.agents.md). |
+| `docs/` | Index tables: [`README.skills.md`](docs/README.skills.md) and [`README.agents.md`](docs/README.agents.md). End-to-end [`scenarios.md`](docs/scenarios.md). |
 | `skills/_shared/` | Shared references used by multiple skills (e.g. the curated CAF link catalog). |
 | `.vscode/mcp.json` | MCP server configuration that gives the agents live tools (Azure, Terraform, Bicep, draw.io, docs). |
 | `CONTRIBUTING.md` | Authoring conventions for skills and agents. |

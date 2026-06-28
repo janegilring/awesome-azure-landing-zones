@@ -28,7 +28,7 @@ See [`AGENTS.md`](AGENTS.md) for the full overview, the skills/agents index in
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Authoring conventions for skills and agents. |
 | `skills/` | One folder per skill (`SKILL.md` + optional `references/`). |
 | `agents/` | One `*.agent.md` per specialized agent persona. |
-| `docs/` | Index tables ([skills](docs/README.skills.md), [agents](docs/README.agents.md)) and the curated [resources / link catalog](docs/resources.md). |
+| `docs/` | Index tables ([skills](docs/README.skills.md), [agents](docs/README.agents.md)), end-to-end [scenarios](docs/scenarios.md), and the curated [resources / link catalog](docs/resources.md). |
 | `.vscode/mcp.json` | MCP server configuration that gives the agents live tools. |
 
 ## Design areas
@@ -124,6 +124,14 @@ Copy-Item -Recurse -Force "$env:TEMP\awesome-azure-landing-zones\agents\*" "$HOM
 Reference it by name in your prompt, e.g.:
 
 > Design connectivity for a multi-region landing zone. Use the `caf-network-topology-connectivity` skill.
+
+## Scenarios and example usage
+
+For end-to-end walkthroughs that combine multiple skills and agents, see
+[`docs/scenarios.md`](docs/scenarios.md). The initial example —
+[self-service subscription vending with a request intake](docs/scenarios.md#scenario-1--self-service-subscription-vending-with-a-request-intake) —
+shows how to define the vending backend first and then build a web (Container Apps) or AI (Foundry)
+self-service intake on top of it.
 
 ## Resources
 
