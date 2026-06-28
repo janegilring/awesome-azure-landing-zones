@@ -86,6 +86,7 @@ deploys with the **AVM sub-vending modules**.
 
 ## Recommended resources
 
+- Vending contract (input schema + trigger) — [`references/vending-contract.md`](references/vending-contract.md)
 - Subscription vending implementation guidance (Architecture Center) — https://learn.microsoft.com/azure/architecture/landing-zones/subscription-vending
 - Subscription vending overview (design area) — https://aka.ms/sub-vending
 - Landing zone vending design area — https://aka.ms/lz-vending

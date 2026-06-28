@@ -49,6 +49,10 @@ This phase produces the two things the frontend needs:
 2. **Trigger mechanism** — how a request starts the pipeline, typically either a commit/PR of a
    parameter file to the platform repo (Gitflow pattern) or a pipeline/API dispatch call.
 
+A concrete, reusable draft of both parts — input schema (with JSON Schema and an example payload) and
+the two trigger patterns — is in
+[`skills/landing-zone-vending/references/vending-contract.md`](../skills/landing-zone-vending/references/vending-contract.md).
+
 The agent's scope ends here: "a request with these inputs, delivered this way, produces a governed
 subscription." It can *specify* the intake's interface but does not build the UI.
 
