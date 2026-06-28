@@ -107,28 +107,6 @@ Reference it by name in your prompt, e.g.:
 
 > Design connectivity for a multi-region landing zone. Use the `caf-network-topology-connectivity` skill.
 
-### Install manually (clone and copy)
-
-Use this when you are not using the Copilot CLI plugin system, or want only specific folders.
-Skills and agents are picked up from your personal `~/.copilot` folders:
-
-```powershell
-git clone https://github.com/janegilring/awesome-azure-landing-zones.git "$env:TEMP\awesome-azure-landing-zones"
-
-New-Item -ItemType Directory -Force -Path "$HOME\.copilot\skills", "$HOME\.copilot\agents" | Out-Null
-Copy-Item -Recurse -Force "$env:TEMP\awesome-azure-landing-zones\skills\*" "$HOME\.copilot\skills\"
-Copy-Item -Recurse -Force "$env:TEMP\awesome-azure-landing-zones\agents\*" "$HOME\.copilot\agents\"
-```
-
-> Skills are deduplicated by their `name` field and agents by file name, and project-level copies
-> take precedence over a plugin if both are present.
-
-### Use a skill or agent
-
-Reference it by name in your prompt, e.g.:
-
-> Design connectivity for a multi-region landing zone. Use the `caf-network-topology-connectivity` skill.
-
 ## Resources
 
 The curated catalog of CAF/ALZ `aka.ms` links and other useful resources has moved to
