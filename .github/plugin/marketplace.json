@@ -1,0 +1,23 @@
+{
+  "name": "awesome-azure-landing-zones",
+  "owner": {
+    "name": "Jan Egil Ring"
+  },
+  "metadata": {
+    "description": "Skills and agents for the Microsoft Cloud Adoption Framework (CAF) and Azure Landing Zones (ALZ).",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "awesome-azure-landing-zones",
+      "description": "AI skills and agents for CAF and Azure Landing Zones: the eight design areas, the ALZ Accelerator, subscription/landing-zone vending, governance and policy, and networking and connectivity.",
+      "version": "0.1.0",
+      "source": ".",
+      "license": "MIT",
+      "homepage": "https://github.com/janegilring/awesome-azure-landing-zones",
+      "repository": "https://github.com/janegilring/awesome-azure-landing-zones",
+      "keywords": ["azure", "landing-zones", "caf", "alz", "governance", "networking", "vending"],
+      "category": "Azure"
+    }
+  ]
+}

@@ -48,24 +48,31 @@ Plus a technical **ALZ Accelerator** skill (Bicep + Terraform).
 
 ## Installing the skills and agents
 
-This repository is a **GitHub Copilot CLI plugin**: the `agents/` and `skills/` folders plus the
-[`plugin.json`](plugin.json) manifest at the root make the whole library installable as a single
-unit. Install everything in one command, enable it declaratively for a team, or copy individual
-folders manually.
+This repository is a **GitHub Copilot CLI plugin** *and* a single-plugin **marketplace**: the
+`agents/` and `skills/` folders plus the [`plugin.json`](plugin.json) manifest make the whole
+library installable as one unit, and [`.github/plugin/marketplace.json`](.github/plugin/marketplace.json)
+publishes it so it can be discovered and installed by name. Install everything in one command,
+enable it declaratively for a team, or copy individual folders manually.
 
-### Install everything with the Copilot CLI
+### Install everything with the Copilot CLI (recommended)
 
 Requires the [GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/copilot-cli/about-cli).
 
 ```powershell
-# Install ALL skills and agents from this repo as one plugin
-copilot plugin install janegilring/awesome-azure-landing-zones
+# Register this repo as a marketplace, then install the plugin (installs ALL skills and agents)
+copilot plugin marketplace add janegilring/awesome-azure-landing-zones
+copilot plugin install awesome-azure-landing-zones@awesome-azure-landing-zones
 
 # Confirm it installed
 copilot plugin list
 ```
 
 Then start `copilot` and reference any skill or agent by name in your prompt.
+
+> You can also install directly from the repo with
+> `copilot plugin install janegilring/awesome-azure-landing-zones`. This still works today, but the
+> Copilot CLI is **deprecating direct repo/URL installs** in favor of `plugin@marketplace`, so the
+> marketplace flow above is the durable option.
 
 ### Enable it declaratively (teams)
 
@@ -74,9 +81,31 @@ repository-level `.github/copilot/settings.json` so everyone on the project gets
 
 ```json
 {
-  "enabledPlugins": ["janegilring/awesome-azure-landing-zones"]
+  "enabledPlugins": ["awesome-azure-landing-zones@awesome-azure-landing-zones"]
 }
 ```
+
+### Install manually (clone and copy)
+
+Use this when you are not using the Copilot CLI plugin system, or want only specific folders.
+Skills and agents are picked up from your personal `~/.copilot` folders:
+
+```powershell
+git clone https://github.com/janegilring/awesome-azure-landing-zones.git "$env:TEMP\awesome-azure-landing-zones"
+
+New-Item -ItemType Directory -Force -Path "$HOME\.copilot\skills", "$HOME\.copilot\agents" | Out-Null
+Copy-Item -Recurse -Force "$env:TEMP\awesome-azure-landing-zones\skills\*" "$HOME\.copilot\skills\"
+Copy-Item -Recurse -Force "$env:TEMP\awesome-azure-landing-zones\agents\*" "$HOME\.copilot\agents\"
+```
+
+> Skills are deduplicated by their `name` field and agents by file name, and project-level copies
+> take precedence over a plugin if both are present.
+
+### Use a skill or agent
+
+Reference it by name in your prompt, e.g.:
+
+> Design connectivity for a multi-region landing zone. Use the `caf-network-topology-connectivity` skill.
 
 ### Install manually (clone and copy)
 
