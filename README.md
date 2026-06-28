@@ -142,9 +142,17 @@ The curated catalog of CAF/ALZ `aka.ms` links and other useful resources has mov
 ## Related: Azure Skills Plugin
 
 Microsoft's [Azure Skills Plugin](https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/)
-(`aka.ms/azure-plugin`) bundles 19+ general Azure skills plus the Azure MCP and Foundry MCP servers.
-This repository is **complementary and CAF/ALZ-focused** — it adds landing-zone design-area
-expertise and ALZ-specific agents on top of the same skills-plus-MCP pattern.
+(`aka.ms/azure-plugin`) bundles 19+ general Azure skills powered by the **Azure MCP Server** (which
+includes Microsoft Foundry tooling) and the **context7** MCP server. This repository is
+**complementary and CAF/ALZ-focused** — it adds landing-zone design-area expertise and ALZ-specific
+agents on top of the same skills-plus-MCP pattern.
+
+Install it (`copilot plugin marketplace add microsoft/azure-skills` then
+`copilot plugin install azure@azure-skills`) when a scenario here uses one of its skills — for
+example [`docs/scenarios.md`](docs/scenarios.md) references `azure-prepare`, `azure-deploy`, and
+`microsoft-foundry`, which ship in **that** plugin, not this one. Note that the **Microsoft Learn
+MCP** server is **not** part of the Azure Skills Plugin; in this repo it is provided by
+[`.vscode/mcp.json`](.vscode/mcp.json) for VS Code Agent mode.
 
 ## Contributing
 

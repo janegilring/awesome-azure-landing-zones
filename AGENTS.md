@@ -98,11 +98,15 @@ these distinct and help migrate between them:
 ### Related: Azure Skills Plugin
 
 Microsoft's [Azure Skills Plugin](https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/)
-(`aka.ms/azure-plugin`) bundles 19+ general Azure skills plus the Azure MCP and Foundry MCP
-servers. This repository is **complementary and CAF/ALZ-focused**: it adds landing-zone design-area
-expertise and ALZ-specific agents on top of the same skills-plus-MCP pattern. The Azure MCP Server
-is shared between the two. Install the Azure Skills Plugin for broad app-to-production Azure
-workflows; use these skills/agents for landing-zone architecture, governance, and accelerator work.
+(`aka.ms/azure-plugin`) bundles 19+ general Azure skills powered by the **Azure MCP Server** (which
+includes Microsoft Foundry tooling) and the **context7** MCP server. This repository is
+**complementary and CAF/ALZ-focused**: it adds landing-zone design-area expertise and ALZ-specific
+agents on top of the same skills-plus-MCP pattern. The Azure MCP Server is shared between the two;
+the **Microsoft Learn MCP** server, however, is **not** part of the Azure Skills Plugin — it is
+declared in this repo's [`.vscode/mcp.json`](.vscode/mcp.json). Install the Azure Skills Plugin for
+broad app-to-production Azure workflows (and as a prerequisite for scenarios that use its skills,
+e.g. `azure-prepare` / `azure-deploy` / `microsoft-foundry`); use these skills/agents for
+landing-zone architecture, governance, and accelerator work.
 
 ## Conventions for agents working in this repo
 

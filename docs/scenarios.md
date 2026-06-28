@@ -33,6 +33,13 @@ flowchart LR
   [`alz-accelerator-expert`](../agents/alz-accelerator-expert.agent.md) agents.
 - A commercial agreement (EA/MCA/CSP) that allows programmatic subscription creation.
 - A secretless deployment identity (OIDC / workload identity federation) for the pipeline.
+- **For Phase 2 (the intake):** the [Azure Skills Plugin](https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/)
+  (`aka.ms/azure-plugin`, `microsoft/azure-skills`). The `azure-prepare`, `azure-deploy`, and
+  `microsoft-foundry` skills referenced below ship in **that** plugin, not in this repository —
+  install it separately. Those skills are powered by the **Azure MCP Server** (its README walks
+  through setup: Node.js 18+ and `az login`; Microsoft Foundry tooling is part of it). The
+  **Microsoft Learn MCP** used for doc grounding is **not** part of the Azure Skills Plugin — in this
+  repo it is provided by [`.vscode/mcp.json`](../.vscode/mcp.json) for VS Code Agent mode.
 
 ### Phase 1 — define the backend with `landing-zone-vending`
 
